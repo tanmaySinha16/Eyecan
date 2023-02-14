@@ -72,8 +72,6 @@ class ReadingFragment:Fragment(R.layout.fragment_reading) {
                 speakButton.text = "RESUME"
             }
 
-            tts.start(text)
-
         }
         stopButton.setOnClickListener {
           findNavController().navigate(R.id.action_readingFragment_to_articlesFragment)
