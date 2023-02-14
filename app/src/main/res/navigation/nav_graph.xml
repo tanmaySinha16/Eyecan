@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/articlesFragment">
+
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.example.eyecan.ui.fragments.ArticlesFragment"
+        android:label="ArticlesFragment" >
+        <action
+            android:id="@+id/action_articlesFragment_to_readingFragment"
+            app:destination="@id/readingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingFragment"
+        android:name="com.example.eyecan.ui.fragments.ReadingFragment"
+        android:label="ReadingFragment" >
+        <action
+            android:id="@+id/action_readingFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.eyecan.ui.fragments.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_readingFragment"
+            app:destination="@id/readingFragment" />
+    </fragment>
+</navigation>
